@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Surprise For Deepta ❤️</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: linear-gradient(-45deg, #ff9a9e, #fecfef, #fbc2eb, #ffdde1);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Poppins', sans-serif;
+            overflow: hidden;
+            position: relative;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        #hearts-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .heart {
+            position: absolute;
+            bottom: -10vh;
+            color: rgba(255, 64, 129, 0.6);
+            animation: floatUp linear forwards;
+            filter: drop-shadow(0 0 5px rgba(255, 64, 129, 0.3));
+        }
+
+        @keyframes floatUp {
+            to {
+                transform: translateY(-120vh) rotate(360deg) scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        .header-section {
+            text-align: center;
+            z-index: 10;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            color: #ffffff;
+            font-size: 4.5rem;
+            margin: 0;
+            text-shadow: 2px 4px 10px rgba(233, 30, 99, 0.3);
+            letter-spacing: 2px;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .subtitle {
+            color: #d81b60;
+            font-size: 1.2rem;
+            margin-top: 10px;
+            font-weight: 400;
+            background: rgba(255,255,255,0.4);
+            padding: 8px 20px;
+            border-radius: 30px;
+            display: inline-block;
+            backdrop-filter: blur(5px);
+            animation: fadeInUp 1s ease-out 0.3s both;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .stack-container {
+            position: relative;
+            width: 340px;
+            height: 440px;
+            z-index: 10;
+            perspective: 1000px;
+            animation: zoomIn 1s ease-out 0.6s both;
+        }
+
+        @keyframes zoomIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .polaroid {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            padding: 16px 16px 80px 16px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            border-radius: 6px;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.5s ease, box-shadow 0.3s;
+            cursor: pointer;
+            transform-origin: center center;
+            user-select: none;
+            -webkit-user-drag: none;
+        }
+
+        .polaroid img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 4px;
+            pointer-events: none;
+            background-color: #fce4ec; /* in case image fails to load */
+        }
+
+        .caption {
+            position: absolute;
+            bottom: 25px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.2rem;
+            color: #444;
+            pointer-events: none;
+        }
+
+        .polaroid:hover {
+            box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+        }
+
+        .instruction {
+            margin-top: 50px;
+            color: #d81b60;
+            font-size: 1.1rem;
+            z-index: 10;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.6; }
+            50% { transform: scale(1.05); opacity: 1; drop-shadow: 0 0 8px rgba(255,105,180,0.5); }
+            100% { transform: scale(1); opacity: 0.6; }
+        }
+
+        /* Responsive */
+        @media (max-width: 500px) {
+            h1 { font-size: 3.5rem; }
+            .stack-container { width: 300px; height: 400px; }
+            .caption { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+    <div id="hearts-container"></div>
+
+    <div class="header-section">
+        <h1>For My Dearest Deepta</h1>
+        <div class="subtitle">Every moment with you is magic ✨</div>
+    </div>
+
+    <div class="stack-container" id="stack-container">
+        <!-- Card 3 -->
+        <div class="polaroid">
+            <img src="images/img3.jpg" alt="Memory 3">
+            <div class="caption">Forever & Always ❤️</div>
+        </div>
+        <!-- Card 2 -->
+        <div class="polaroid">
+            <img src="images/img2.jpg" alt="Memory 2">
+            <div class="caption">My Favorite Smile ✨</div>
+        </div>
+        <!-- Card 1 -->
+        <div class="polaroid">
+            <img src="images/img1.jpg" alt="Memory 1">
+            <div class="caption">You are my world 🌍</div>
+        </div>
+    </div>
+
+    <div class="instruction">Tap the photo to see more</div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let cards = Array.from(document.querySelectorAll('.polaroid'));
+            let isAnimating = false;
+            
+            function updateCards() {
+                cards.forEach((card, index) => {
+                    card.style.zIndex = index;
+                    card.style.pointerEvents = index === cards.length - 1 ? 'auto' : 'none';
+                    
+                    let scale = 1 - (cards.length - 1 - index) * 0.05;
+                    // Predefined smooth rotations
+                    let rotations = [-4, 3, -2];
+                    let rotate = rotations[index % rotations.length]; 
+                    
+                    if(index === cards.length - 1) {
+                        rotate = 0; // The active top card is perfectly straight
+                    }
+                    
+                    let translateY = (cards.length - 1 - index) * 15; // Stack drops slightly downward
+                    
+                    card.style.transform = `scale(${scale}) translateY(${translateY}px) rotate(${rotate}deg)`;
+                });
+            }
+            
+            // Initialize cards setup
+            updateCards();
+            
+            // Click to swipe to next card
+            document.getElementById('stack-container').addEventListener('click', () => {
+                if (isAnimating) return;
+                isAnimating = true;
+                
+                let topCard = cards.pop();
+                
+                // Fly off-screen left or right
+                let flyDirection = Math.random() > 0.5 ? 1 : -1;
+                topCard.style.transform = `translateX(${flyDirection * 120}%) translateY(-50px) rotate(${flyDirection * 30}deg) scale(0.9)`;
+                topCard.style.opacity = '0';
+                
+                setTimeout(() => {
+                    // Send to the back of the stack
+                    cards.unshift(topCard);
+                    topCard.style.opacity = '1';
+                    updateCards();
+                    
+                    // Allow clicking again after reposition
+                    setTimeout(() => {
+                        isAnimating = false;
+                    }, 600); 
+                }, 500); 
+            });
+
+            // Heart animations in the background
+            function createHeart() {
+                const heart = document.createElement('div');
+                heart.classList.add('heart');
+                heart.innerHTML = '❤️';
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.animationDuration = Math.random() * 3 + 3 + 's';
+                heart.style.fontSize = Math.random() * 15 + 10 + 'px';
+                document.getElementById('hearts-container').appendChild(heart);
+                
+                setTimeout(() => { heart.remove(); }, 6000);
+            }
+            // Generate a heart every 400ms
+            setInterval(createHeart, 400);
+        });
+    </script>
+</body>
+</html>
